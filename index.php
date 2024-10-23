@@ -15,7 +15,7 @@
         <label> Numero 02 </label>
         <input type="text" name="numero2" id="numero2" />
 
-        <button> Calcular com ajax </button>
+        <button onclick="calcular();"> Calcular com ajax </button>
 
         <p id="resultado"> </p>
 </pre>
