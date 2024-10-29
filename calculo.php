@@ -1,15 +1,19 @@
 <?php
 header('Content-Type: application/json');
 
-if($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $numero1 = $_POST['numero1'];
-    $numero2 = $_POST['numero2'];
+if($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-    $soma = $numero1 + $numero2;
+    $data = json_decode(file_get_contents("php://input"));
 
-    echo json_encode(['soma' => $soma]);
+    if (isset($data->numero1) && isset($data->numero2)) {
+        $soma = $data->numero1 + $data->numero2;
+
+        echo json_encode(['soma' => $soma]);
 
 } else {
+    echo json_encode(["erro' => 'Valores numero1 e numero2 são necessários."]);
+}
+}else{
     echo json_encode(['erro' => 'Método não suportado. Use o POST']);
 }
 
