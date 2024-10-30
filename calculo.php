@@ -16,5 +16,4 @@ if($_SERVER['REQUEST_METHOD'] == 'POST') {
 }else{
     echo json_encode(['erro' => 'Método não suportado. Use o POST']);
 }
-
 ?>
