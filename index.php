@@ -9,11 +9,11 @@
     <h1> Calculadora AJAX </h1>
 
     <pre>
-        <label> Numero 01 </label>
-        <input type="text" name="numero1" id="numero1" />
+        <label> largura </label>
+        <input type="number" name="larguraComodo" id="larguraComodo" />
 
-        <label> Numero 02 </label>
-        <input type="text" name="numero2" id="numero2" />
+        <label> comprimento </label>
+        <input type="number" name="ComprimentoComodo" id="ComprimentoComodo" />
 
         <button onclick="calcular();"> Calcular com ajax </button>
 
